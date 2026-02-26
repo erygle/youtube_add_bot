@@ -10,7 +10,7 @@ load_dotenv()
 LASTFM_API_KEY = os.getenv("LASTFM_API_KEY")
 LASTFM_USER = os.getenv("LASTFM_USER")
 YT_PLAYLIST_ID = os.getenv("YT_PLAYLIST_ID")
-START_DATE = datetime(2026, 2, 4) # Başlangıç tarihi
+START_DATE = datetime(2026, 2, 23) # Başlangıç tarihi
 
 def get_lastfm_tracks():
     if not LASTFM_API_KEY or not LASTFM_USER:
