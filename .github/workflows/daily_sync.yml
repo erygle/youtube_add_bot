@@ -33,4 +33,4 @@ jobs:
         echo "YT_PLAYLIST_ID=${{ secrets.YT_PLAYLIST_ID }}" >> .env
 
     - name: Run sync script
-      run: python main.py
+      run: python sync.py
