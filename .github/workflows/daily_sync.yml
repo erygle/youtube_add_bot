@@ -4,7 +4,7 @@ on:
   schedule:
     # Her gün Türkiye saatiyle gece 03:00'te çalışır (UTC 00:00)
     - cron: '0 0 * * *'
-  workflow_dispatch: # Manuel olarak tetiklemek istersen bu buton çıkar
+  workflow_dispatch:
 
 jobs:
   build:
@@ -28,7 +28,6 @@ jobs:
       run: |
         echo '${{ secrets.YT_BROWSER_JSON }}' > browser.json
         echo "LASTFM_API_KEY=${{ secrets.LASTFM_API_KEY }}" >> .env
-        echo "LASTFM_API_SECRET=${{ secrets.LASTFM_API_SECRET }}" >> .env
         echo "LASTFM_USER=${{ secrets.LASTFM_USER }}" >> .env
         echo "YT_PLAYLIST_ID=${{ secrets.YT_PLAYLIST_ID }}" >> .env
 

@@ -5,6 +5,9 @@ browser.json
 *.json
 !requirements.txt
 
+# --- Python ve Sanal Ortam Dosyaları ---
+auth_kur.py
+
 __pycache__/
 *.py[cod]
 *$py.class
