@@ -11,7 +11,7 @@ load_dotenv()
 LASTFM_API_KEY = os.getenv("LASTFM_API_KEY")
 LASTFM_USER = os.getenv("LASTFM_USER")
 YT_PLAYLIST_ID = os.getenv("YT_PLAYLIST_ID")
-START_DATE = datetime.now() - timedelta(days=3) # Başlangıç tarihi
+START_DATE = datetime.now() - timedelta(days=2) # Başlangıç tarihi
 
 def get_lastfm_tracks():
     if not LASTFM_API_KEY or not LASTFM_USER:
@@ -126,13 +126,13 @@ def sync_to_youtube(track_names):
                 
                 existing_tracks.add(song_query.lower())
                 
-                time.sleep(10) 
+                time.sleep(8) 
             else:
                 print(f"[{i+1}/{len(track_names)}] ❌ Bulunamadı: {song_query}")
                 
         except Exception as e:
             print(f"⚠️ Hata ({song_query}): {e}")
-            time.sleep(10)
+            time.sleep(8)
 
     print(f"\n🏁 İşlem Tamamlandı! Toplam {added_count} yeni şarkı eklendi.")
 
