@@ -126,13 +126,13 @@ def sync_to_youtube(track_names):
                 
                 existing_tracks.add(song_query.lower())
                 
-                time.sleep(8) 
+                time.sleep(3) 
             else:
                 print(f"[{i+1}/{len(track_names)}] ❌ Bulunamadı: {song_query}")
                 
         except Exception as e:
             print(f"⚠️ Hata ({song_query}): {e}")
-            time.sleep(8)
+            time.sleep(3)
 
     print(f"\n🏁 İşlem Tamamlandı! Toplam {added_count} yeni şarkı eklendi.")
 
